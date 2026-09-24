@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AICL Website Prototype</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap">
+<style>
+:root{--bg:#faf8fb;--surface:#ffffff;--ink:#16121a;--soft:#4b4452;--line:#e3dde8;--accent:#69008c;--accent-ink:#ffffff;--accent-soft:#f3e8f8;--note-bg:#fff7d6;--note-ink:#4d3500;--note-line:#9a6b00}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1d0127;--surface:#2c003c;--ink:#f4eef7;--soft:#cdbfd6;--line:#4a2a5c;--accent:#d9a6ee;--accent-ink:#21002e;--accent-soft:#3b0a50;--note-bg:#3a2e0a;--note-ink:#f5e3a8;--note-line:#b8923a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d0127;--surface:#2c003c;--ink:#f4eef7;--soft:#cdbfd6;--line:#4a2a5c;--accent:#d9a6ee;--accent-ink:#21002e;--accent-soft:#3b0a50;--note-bg:#3a2e0a;--note-ink:#f5e3a8;--note-line:#b8923a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:40px 64px;display:flex;flex-direction:column;gap:40px}
+header{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px;align-items:end}
+@media (max-width:760px){header{grid-template-columns:1fr}}
+.eyebrow{margin:0;font-size:12px;letter-spacing:1px;text-transform:uppercase;font-weight:500;color:var(--soft)}
+h1{margin:8px 0 0;font-family:Poppins,Roboto,Arial,sans-serif;font-weight:700;font-size:clamp(32px,5vw,48px);line-height:1.1;text-wrap:balance}
+.lead{margin:14px 0 0;max-width:62ch;color:var(--soft);font-size:17px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;padding:13px 22px;border-radius:3px;font-weight:500;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.try{background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:20px 22px}
+.try h2{margin:0 0 8px;font-family:Poppins,Roboto,sans-serif;font-size:17px}
+.try ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;color:var(--soft);font-size:15px}
+.groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}
+@media (max-width:760px){.groups{grid-template-columns:1fr}}
+.group{display:flex;flex-direction:column}
+.gh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:2px solid var(--accent);padding-bottom:6px}
+.gh h2{margin:0;font-family:Poppins,Roboto,sans-serif;font-weight:600;font-size:20px}
+.count{font-size:13px;color:var(--soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.gd{margin:8px 0 10px;color:var(--soft);font-size:14px}
+.group ul{list-style:none;margin:0;padding:0}
+.group li a{display:flex;justify-content:space-between;gap:16px;padding:9px 4px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
+.group li a:hover{background:var(--accent-soft)}
+.t{font-weight:500}
+.f{font-size:12px;color:var(--soft);font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.notes{background:var(--note-bg);color:var(--note-ink);border:1px dashed var(--note-line);border-radius:7px;padding:18px 22px;font-size:15px}
+.notes h2{margin:0 0 6px;font-size:16px}
+.notes ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div>
+<p class="eyebrow">Avail International Consult &middot; restructure prototype</p>
+<h1>AICL Website Prototype</h1>
+<p class="lead">All 48 pages of the restructured website, clickable end to end. The design keeps AICL's current look; every page leads to one next step: book a free consultation, chat on WhatsApp, or get a free guide.</p>
+<div class="actions"><a class="btn primary" href="index.html">Open the homepage</a><a class="btn ghost" href="Tool-Cost.html">Try the Cost Estimator</a></div>
+</div>
+<div class="try"><h2>Things to try</h2><ul>
+<li>Book a consultation and switch between Ikeja, Alapere and online.</li>
+<li>Run the Eligibility Checker with an HND and Canada.</li>
+<li>Stay on any content page for 15 seconds, or scroll half-way, to see the free-guide slide-in. It shows once per visit; the purple Free guide tab reopens it.</li>
+<li>Open a FAQ answer, or switch Blog &amp; News between guides and news.</li>
+<li>Turn the yellow pipeline notes on or off with the button at the bottom of each page.</li>
+</ul></div>
+</header>
+<div class="groups"><section class="group" id="core"><div class="gh"><h2>Core pages</h2><span class="count">7 pages</span></div><p class="gd">Home, booking and the pages every visitor passes through.</p><ul><li><a href="index.html"><span class="t">Home</span><span class="f">index.html</span></a></li><li><a href="About.html"><span class="t">About</span><span class="f">About.html</span></a></li><li><a href="Book.html"><span class="t">Book a Free Consultation</span><span class="f">Book.html</span></a></li><li><a href="Contact.html"><span class="t">Contact</span><span class="f">Contact.html</span></a></li><li><a href="FAQ.html"><span class="t">FAQ</span><span class="f">FAQ.html</span></a></li><li><a href="Apply.html"><span class="t">Apply Online</span><span class="f">Apply.html</span></a></li><li><a href="ThankYou.html"><span class="t">Thank-you page</span><span class="f">ThankYou.html</span></a></li></ul></section><section class="group" id="dest"><div class="gh"><h2>Study destinations</h2><span class="count">12 pages</span></div><p class="gd">One page per country, each built to rank for “study in [country] from Nigeria”.</p><ul><li><a href="Destinations.html"><span class="t">Study Destinations</span><span class="f">Destinations.html</span></a></li><li><a href="Country-UK.html"><span class="t">Study in United Kingdom</span><span class="f">Country-UK.html</span></a></li><li><a href="Country-USA.html"><span class="t">Study in United States</span><span class="f">Country-USA.html</span></a></li><li><a href="Country-Canada.html"><span class="t">Study in Canada</span><span class="f">Country-Canada.html</span></a></li><li><a href="Country-Ireland.html"><span class="t">Study in Ireland</span><span class="f">Country-Ireland.html</span></a></li><li><a href="Country-Australia.html"><span class="t">Study in Australia</span><span class="f">Country-Australia.html</span></a></li><li><a href="Country-Germany.html"><span class="t">Study in Germany</span><span class="f">Country-Germany.html</span></a></li><li><a href="Country-Malaysia.html"><span class="t">Study in Malaysia</span><span class="f">Country-Malaysia.html</span></a></li><li><a href="Country-Poland.html"><span class="t">Study in Poland</span><span class="f">Country-Poland.html</span></a></li><li><a href="Country-Turkey.html"><span class="t">Study in Turkey</span><span class="f">Country-Turkey.html</span></a></li><li><a href="Country-Cyprus.html"><span class="t">Study in Cyprus</span><span class="f">Country-Cyprus.html</span></a></li><li><a href="Country-Dubai.html"><span class="t">Study in Dubai (UAE)</span><span class="f">Country-Dubai.html</span></a></li></ul></section><section class="group" id="serv"><div class="gh"><h2>Services</h2><span class="count">7 pages</span></div><p class="gd">Six service pages, each with its own enquiry form.</p><ul><li><a href="Services.html"><span class="t">Services</span><span class="f">Services.html</span></a></li><li><a href="Service-Admissions.html"><span class="t">Admissions and College Application</span><span class="f">Service-Admissions.html</span></a></li><li><a href="Service-StudentVisa.html"><span class="t">Student Visa</span><span class="f">Service-StudentVisa.html</span></a></li><li><a href="Service-DependentVisa.html"><span class="t">Dependent Visa</span><span class="f">Service-DependentVisa.html</span></a></li><li><a href="Service-VisitVisa.html"><span class="t">Visit Visa</span><span class="f">Service-VisitVisa.html</span></a></li><li><a href="Service-PastoralCare.html"><span class="t">Pastoral Care</span><span class="f">Service-PastoralCare.html</span></a></li><li><a href="Service-CareerGuidance.html"><span class="t">Career Guidance</span><span class="f">Service-CareerGuidance.html</span></a></li></ul></section><section class="group" id="tests"><div class="gh"><h2>Tests and tools</h2><span class="count">8 pages</span></div><p class="gd">Test preparation with registration, plus the two free tools.</p><ul><li><a href="Tests.html"><span class="t">Tests</span><span class="f">Tests.html</span></a></li><li><a href="Test-IELTS.html"><span class="t">IELTS</span><span class="f">Test-IELTS.html</span></a></li><li><a href="Test-TOEFL.html"><span class="t">TOEFL</span><span class="f">Test-TOEFL.html</span></a></li><li><a href="Test-SAT.html"><span class="t">SAT</span><span class="f">Test-SAT.html</span></a></li><li><a href="Test-GRE.html"><span class="t">GRE</span><span class="f">Test-GRE.html</span></a></li><li><a href="Test-GMAT.html"><span class="t">GMAT</span><span class="f">Test-GMAT.html</span></a></li><li><a href="Tool-Eligibility.html"><span class="t">Eligibility Checker</span><span class="f">Tool-Eligibility.html</span></a></li><li><a href="Tool-Cost.html"><span class="t">Study Cost Estimator</span><span class="f">Tool-Cost.html</span></a></li></ul></section><section class="group" id="content"><div class="gh"><h2>Blog, news, guides and stories</h2><span class="count">6 pages</span></div><p class="gd">Blog &amp; News, free guides, success stories and events.</p><ul><li><a href="Blog.html"><span class="t">Blog &amp; News</span><span class="f">Blog.html</span></a></li><li><a href="BlogPost.html"><span class="t">Blog post (guide)</span><span class="f">BlogPost.html</span></a></li><li><a href="NewsPost.html"><span class="t">News post (event highlight)</span><span class="f">NewsPost.html</span></a></li><li><a href="Resources.html"><span class="t">Free Guides</span><span class="f">Resources.html</span></a></li><li><a href="SuccessStories.html"><span class="t">Success Stories</span><span class="f">SuccessStories.html</span></a></li><li><a href="Events.html"><span class="t">Events</span><span class="f">Events.html</span></a></li></ul></section><section class="group" id="loc"><div class="gh"><h2>Location pages</h2><span class="count">3 pages</span></div><p class="gd">The Lagos hub and one page per office, each linked from its Google Business Profile.</p><ul><li><a href="Lagos.html"><span class="t">Study Abroad in Lagos (hub)</span><span class="f">Lagos.html</span></a></li><li><a href="Branch-Ikeja.html"><span class="t">AICL Ikeja (head office)</span><span class="f">Branch-Ikeja.html</span></a></li><li><a href="Branch-Alapere.html"><span class="t">AICL Alapere</span><span class="f">Branch-Alapere.html</span></a></li></ul></section><section class="group" id="land"><div class="gh"><h2>Campaign landing pages</h2><span class="count">5 pages</span></div><p class="gd">Campaign pages kept out of the menu, reached from ads, flyer QR codes and WhatsApp broadcasts.</p><ul><li><a href="Event-EducationExpo.html"><span class="t">Event: Avail Education Expo 2027</span><span class="f">Event-EducationExpo.html</span></a></li><li><a href="Event-OpenDay.html"><span class="t">Event: University open day</span><span class="f">Event-OpenDay.html</span></a></li><li><a href="Intake-UK-Jan2027.html"><span class="t">Intake campaign: UK January 2027</span><span class="f">Intake-UK-Jan2027.html</span></a></li><li><a href="Refer.html"><span class="t">Refer a Friend</span><span class="f">Refer.html</span></a></li><li><a href="Review.html"><span class="t">Leave a Review</span><span class="f">Review.html</span></a></li></ul></section></div>
+<div class="notes"><h2>Before this goes live</h2><ul>
+<li>Pages are laid out at desktop width (1440px). Phone layouts are the web designer's next step.</li>
+<li>Text in [square brackets] is a placeholder for AICL to supply: opening hours, event dates, fees, photos, maps and article text.</li>
+<li>Cost Estimator figures are samples. Real figures need sources and an &ldquo;as of&rdquo; date.</li>
+<li>Forms are not connected yet; every submit opens the thank-you page.</li>
+</ul></div>
+</div>
+</body>
+</html>

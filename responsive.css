@@ -1,0 +1,65 @@
+/* AICL prototype: responsive layer. The pages are authored at 1440px; these rules let them flow on laptops, tablets and phones. */
+html, body { overflow-x: hidden; }
+#app { width: 100% !important; }
+#app > div { width: 100% !important; max-width: 1440px; height: auto !important; margin: 0 auto; overflow: visible !important; }
+#app section { height: auto !important; }
+#app section:first-child { position: relative; overflow: visible !important; z-index: 30; }
+#app img { max-width: 100%; }
+#app input, #app select, #app textarea { max-width: 100%; min-width: 0; }
+#app [style*="display: flex"] > * { min-width: 0; }
+.aicl-menu-btn { display: none; }
+
+/* Laptops and tablets */
+@media (max-width: 1180px) {
+  #app section { padding-left: 32px !important; padding-right: 32px !important; }
+  #app nav { display: none !important; }
+  .aicl-menu-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 2px solid #69008c; border-radius: 3px; background: #ffffff; color: #69008c; font: 500 15px Roboto, Arial, sans-serif; cursor: pointer; }
+  body.aicl-menu-open #app nav { display: flex !important; flex-direction: column; align-items: stretch !important; gap: 0 !important; position: absolute; top: 100%; left: 0; right: 0; padding: 8px 20px 16px; background: #ffffff; border-bottom: 2px solid #69008c; }
+  body.aicl-menu-open #app nav a { padding: 14px 4px !important; border-bottom: 1px solid #dadbdd !important; font-size: 17px !important; }
+  #app [style*="repeat(4, minmax(0, 1fr))"], #app [style*="repeat(5, minmax(0, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  #app [style*="grid-template-columns: 760px 1fr"], #app [style*="grid-template-columns: 700px 1fr"],
+  #app [style*="grid-template-columns: 1fr 460px"], #app [style*="grid-template-columns: 1fr 520px"],
+  #app [style*="grid-template-columns: 1fr 340px"] { grid-template-columns: minmax(0, 1fr) !important; }
+  #app [style*="width: 620px"], #app [style*="width: 560px"], #app [style*="width: 520px"] { width: 100% !important; }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  #app section:not(:first-child) > div[style*="justify-content: space-between"],
+  #app section:not(:first-child) > div[style*="display: flex; align-items: center; height: 100%"],
+  #app section:not(:first-child) > div[style*="display: flex; gap: 56px"],
+  #app section:not(:first-child) > div[style*="display: flex; align-items: center; gap: 40px"],
+  #app section:not(:first-child) > div[style*="display: flex; align-items: center; gap: 48px"] { flex-direction: column !important; align-items: stretch !important; gap: 28px !important; }
+  #app [style*="width: 440px"], #app [style*="width: 420px"] { width: 100% !important; }
+  #app img[style*="object-fit: cover"][style*="height: 4"], #app img[style*="object-fit: cover"][style*="height: 2"] { width: 100% !important; height: auto !important; aspect-ratio: 4 / 3; }
+  #app [style*="repeat(3, minmax(0, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* Phones */
+@media (max-width: 640px) {
+  #app section { padding: 36px 18px !important; }
+  #app section:first-child { padding: 12px 16px !important; }
+  #app section:first-child img { width: 150px !important; height: 42px !important; }
+  #app section:first-child a[href="Book.html"] { padding: 10px 12px !important; font-size: 14px !important; }
+  #app section:first-child > div { gap: 10px !important; }
+  #app h1 { font-size: 32px !important; line-height: 40px !important; }
+  #app h2 { font-size: 23px !important; line-height: 31px !important; }
+  #app [style*="grid-template-columns: repeat"], #app [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: minmax(0, 1fr) !important; }
+  #app [style*="display: flex; gap: 14px"] { flex-direction: column !important; }
+  #app [style*="display: flex; gap: 12px"], #app [style*="display: flex; gap: 10px"] { flex-wrap: wrap !important; }
+  #app section:not(:first-child) [style*="justify-content: space-between"] { flex-wrap: wrap; }
+  #app [style*="font-size: 52px"], #app [style*="font-size: 50px"], #app [style*="font-size: 48px"], #app [style*="font-size: 46px"], #app [style*="font-size: 44px"], #app [style*="font-size: 40px"] { font-size: 32px !important; line-height: 40px !important; }
+  #app [style*="padding: 32px"], #app [style*="padding: 28px"] { padding: 20px !important; }
+  #app [style*="width: 170px; height: 220px"] { width: 120px !important; height: 156px !important; }
+  #app a[style*="position: fixed; right: 28px"] { right: 12px !important; bottom: 12px !important; padding: 11px 14px !important; font-size: 14px !important; }
+  #app button[style*="writing-mode"] { writing-mode: horizontal-tb !important; transform: none !important; top: auto !important; bottom: 12px; left: 12px !important; border-radius: 22px !important; padding: 12px 16px !important; font-size: 14px !important; }
+  #app div[role="dialog"] { left: 10px !important; right: 10px !important; bottom: 10px !important; width: auto !important; max-height: 85vh; overflow-y: auto !important; }
+  #app div[style*="background: #fff7d6"][style*="position: absolute"] { position: relative !important; top: auto !important; right: auto !important; max-width: none !important; margin-top: 16px; }
+  .aicl-pill-bar { bottom: auto !important; top: auto !important; }
+}
+.aicl-menu-btn svg { flex: none; width: 18px; height: 18px; display: block; }
+@media (max-width: 640px) {
+  #app section:first-child img { width: 118px !important; height: 34px !important; }
+  #app section:first-child a[href="Book.html"] { padding: 8px 10px !important; font-size: 13px !important; line-height: 16px !important; max-width: 130px; text-align: center; }
+  .aicl-menu-btn { padding: 8px 10px !important; font-size: 14px !important; gap: 6px !important; flex: none; }
+}
