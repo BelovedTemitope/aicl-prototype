@@ -63,3 +63,6 @@ html, body { overflow-x: hidden; }
   #app section:first-child a[href="Book.html"] { padding: 8px 10px !important; font-size: 13px !important; line-height: 16px !important; max-width: 130px; text-align: center; }
   .aicl-menu-btn { padding: 8px 10px !important; font-size: 14px !important; gap: 6px !important; flex: none; }
 }
+/* Partner universities grid */
+@media (max-width: 1180px) { #app [style*="repeat(6, minmax(0, 1fr))"] { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+@media (max-width: 640px) { #app [style*="repeat(6, minmax(0, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } #app [style*="repeat(6, minmax(0, 1fr))"] > div { height: auto !important; min-height: 88px; } }
